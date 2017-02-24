@@ -7,25 +7,28 @@ import PatronObservador.comportamiento.Sujeto;
 
 public class User implements Observadores {
 	
-	public Sujeto subject;
 	public String name;
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
+	public User(String name) {
+		// TODO Auto-generated constructor stub
 		this.name = name;
 	}
-
-	public User(Sujeto subject){
-	      this.subject = subject;
-	   }
-
 	@Override
 	public void notificar(Sujeto sujeto) {
 		// TODO Auto-generated method stub
-		System.out.println("state : " + sujeto.getState());
+		System.out.println(name+ " state : " + sujeto.getState());
+		
+	}
 
+	@Override
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		this.name = name;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
 	}
 
 }
